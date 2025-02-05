@@ -44,7 +44,14 @@ export default function Home() {
       <p className="P-3 text-lg">
         Carrinho:<strong> {carrinho} </strong> itens
       </p>
+
+      {carrinho > 0?
       <button onClick={()=>limpaCarrinho()} className="bg-yellow-400 text-black mt-5 p-3">Limpar</button>
+      :
+      <div></div>
+
+    }
+      
       <button onClick={()=>aplicaCupom()} className="bg-black text-white mt-5 p-3">Adicionar Cupom</button>
 
       <hr/>
@@ -63,7 +70,12 @@ export default function Home() {
         <p>R$ 25,00</p>        
         <button onClick={()=>manipulaCarrinho(true)} className="bg-lime-400 text-black mt-5 p-3">Adicionar ao carrinho</button>
         <br/>
+        {carrinho > 0?
+        
         <button onClick={()=>manipulaCarrinho(false)} className="bg-lime-400 text-black mt-5 p-3">Remover do Carrinho</button>
+        :
+        <div></div>
+      }
            
 
       </div>
