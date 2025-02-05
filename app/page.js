@@ -6,12 +6,12 @@ export default function Home() {
 
   // Aqui entra o JavaScript normal
   // let carrinho = 0;
-  let [ carrinho, alteraCarrinho ] = useState(0);
-  let [precoProduto, alteraPreco ] = useState(25);
-  let [ valorTotal, alteravalorTotal ] = useState(0);
+  const [ carrinho, alteraCarrinho ] = useState(0);
+  const [precoProduto, alteraPreco ] = useState(25);
+  const [ valorTotal, alteravalorTotal ] = useState(0);
 
   function manipulaCarrinho( adicionar ){
-     let novoCarrinho = carrinho;
+     const novoCarrinho = carrinho;
 
     if(adicionar == true){
       alteraCarrinho(carrinho + 1)  
